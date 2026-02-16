@@ -38,7 +38,7 @@ struct FactoryProviderImplementation: ProviderImplementation {
         let cookieBinding = Binding(
             get: { context.settings.factoryCookieSource.rawValue },
             set: { raw in
-                context.settings.factoryCookieSource = ProviderCookieSource(rawValue: raw) ?? .auto
+                context.settings.factoryCookieSource = ProviderCookieSource(rawValue: raw) ?? .off
             })
         let cookieOptions = ProviderCookieSourceUI.options(
             allowsOff: false,

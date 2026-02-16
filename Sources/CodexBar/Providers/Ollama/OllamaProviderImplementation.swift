@@ -38,7 +38,7 @@ struct OllamaProviderImplementation: ProviderImplementation {
         let cookieBinding = Binding(
             get: { context.settings.ollamaCookieSource.rawValue },
             set: { raw in
-                context.settings.ollamaCookieSource = ProviderCookieSource(rawValue: raw) ?? .auto
+                context.settings.ollamaCookieSource = ProviderCookieSource(rawValue: raw) ?? .off
             })
         let cookieOptions = ProviderCookieSourceUI.options(
             allowsOff: false,

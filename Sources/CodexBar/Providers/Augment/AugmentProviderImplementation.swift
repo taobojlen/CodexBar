@@ -42,7 +42,7 @@ struct AugmentProviderImplementation: ProviderImplementation {
         let cookieBinding = Binding(
             get: { context.settings.augmentCookieSource.rawValue },
             set: { raw in
-                context.settings.augmentCookieSource = ProviderCookieSource(rawValue: raw) ?? .auto
+                context.settings.augmentCookieSource = ProviderCookieSource(rawValue: raw) ?? .off
             })
         let cookieOptions = ProviderCookieSourceUI.options(
             allowsOff: false,

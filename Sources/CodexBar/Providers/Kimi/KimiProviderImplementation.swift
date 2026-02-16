@@ -29,7 +29,7 @@ struct KimiProviderImplementation: ProviderImplementation {
         let cookieBinding = Binding(
             get: { context.settings.kimiCookieSource.rawValue },
             set: { raw in
-                context.settings.kimiCookieSource = ProviderCookieSource(rawValue: raw) ?? .auto
+                context.settings.kimiCookieSource = ProviderCookieSource(rawValue: raw) ?? .off
             })
         let options = ProviderCookieSourceUI.options(
             allowsOff: true,

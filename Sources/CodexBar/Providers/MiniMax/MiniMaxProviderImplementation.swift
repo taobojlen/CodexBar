@@ -54,7 +54,7 @@ struct MiniMaxProviderImplementation: ProviderImplementation {
         let cookieBinding = Binding(
             get: { context.settings.minimaxCookieSource.rawValue },
             set: { raw in
-                context.settings.minimaxCookieSource = ProviderCookieSource(rawValue: raw) ?? .auto
+                context.settings.minimaxCookieSource = ProviderCookieSource(rawValue: raw) ?? .off
             })
         let cookieOptions = ProviderCookieSourceUI.options(
             allowsOff: false,

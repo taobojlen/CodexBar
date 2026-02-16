@@ -24,7 +24,7 @@ extension SettingsStore {
     }
 
     var opencodeCookieSource: ProviderCookieSource {
-        get { self.resolvedCookieSource(provider: .opencode, fallback: .auto) }
+        get { self.resolvedCookieSource(provider: .opencode, fallback: .off) }
         set {
             self.updateProviderConfig(provider: .opencode) { entry in
                 entry.cookieSource = newValue

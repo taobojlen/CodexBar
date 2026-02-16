@@ -13,7 +13,7 @@ extension SettingsStore {
     }
 
     var cursorCookieSource: ProviderCookieSource {
-        get { self.resolvedCookieSource(provider: .cursor, fallback: .auto) }
+        get { self.resolvedCookieSource(provider: .cursor, fallback: .off) }
         set {
             self.updateProviderConfig(provider: .cursor) { entry in
                 entry.cookieSource = newValue

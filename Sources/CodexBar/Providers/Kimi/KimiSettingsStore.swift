@@ -13,7 +13,7 @@ extension SettingsStore {
     }
 
     var kimiCookieSource: ProviderCookieSource {
-        get { self.resolvedCookieSource(provider: .kimi, fallback: .auto) }
+        get { self.resolvedCookieSource(provider: .kimi, fallback: .off) }
         set {
             self.updateProviderConfig(provider: .kimi) { entry in
                 entry.cookieSource = newValue

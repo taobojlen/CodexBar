@@ -95,7 +95,7 @@ struct CodexProviderImplementation: ProviderImplementation {
         let cookieBinding = Binding(
             get: { context.settings.codexCookieSource.rawValue },
             set: { raw in
-                context.settings.codexCookieSource = ProviderCookieSource(rawValue: raw) ?? .auto
+                context.settings.codexCookieSource = ProviderCookieSource(rawValue: raw) ?? .off
             })
 
         let usageOptions = CodexUsageDataSource.allCases.map {

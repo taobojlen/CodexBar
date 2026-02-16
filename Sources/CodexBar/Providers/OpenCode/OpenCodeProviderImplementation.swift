@@ -44,7 +44,7 @@ struct OpenCodeProviderImplementation: ProviderImplementation {
         let cookieBinding = Binding(
             get: { context.settings.opencodeCookieSource.rawValue },
             set: { raw in
-                context.settings.opencodeCookieSource = ProviderCookieSource(rawValue: raw) ?? .auto
+                context.settings.opencodeCookieSource = ProviderCookieSource(rawValue: raw) ?? .off
             })
         let cookieOptions = ProviderCookieSourceUI.options(
             allowsOff: false,
