@@ -71,7 +71,7 @@ struct ClaudeProviderImplementation: ProviderImplementation {
         let cookieBinding = Binding(
             get: { context.settings.claudeCookieSource.rawValue },
             set: { raw in
-                context.settings.claudeCookieSource = ProviderCookieSource(rawValue: raw) ?? .auto
+                context.settings.claudeCookieSource = ProviderCookieSource(rawValue: raw) ?? .off
             })
         let keychainPromptPolicyBinding = Binding(
             get: { context.settings.claudeOAuthKeychainPromptMode.rawValue },

@@ -13,7 +13,7 @@ extension SettingsStore {
     }
 
     var ollamaCookieSource: ProviderCookieSource {
-        get { self.resolvedCookieSource(provider: .ollama, fallback: .auto) }
+        get { self.resolvedCookieSource(provider: .ollama, fallback: .off) }
         set {
             self.updateProviderConfig(provider: .ollama) { entry in
                 entry.cookieSource = newValue

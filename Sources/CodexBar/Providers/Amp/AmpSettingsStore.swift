@@ -13,7 +13,7 @@ extension SettingsStore {
     }
 
     var ampCookieSource: ProviderCookieSource {
-        get { self.resolvedCookieSource(provider: .amp, fallback: .auto) }
+        get { self.resolvedCookieSource(provider: .amp, fallback: .off) }
         set {
             self.updateProviderConfig(provider: .amp) { entry in
                 entry.cookieSource = newValue

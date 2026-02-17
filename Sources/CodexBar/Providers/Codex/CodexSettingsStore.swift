@@ -32,7 +32,7 @@ extension SettingsStore {
 
     var codexCookieSource: ProviderCookieSource {
         get {
-            let resolved = self.resolvedCookieSource(provider: .codex, fallback: .auto)
+            let resolved = self.resolvedCookieSource(provider: .codex, fallback: .off)
             return self.openAIWebAccessEnabled ? resolved : .off
         }
         set {

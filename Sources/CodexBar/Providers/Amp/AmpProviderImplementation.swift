@@ -24,7 +24,7 @@ struct AmpProviderImplementation: ProviderImplementation {
         let cookieBinding = Binding(
             get: { context.settings.ampCookieSource.rawValue },
             set: { raw in
-                context.settings.ampCookieSource = ProviderCookieSource(rawValue: raw) ?? .auto
+                context.settings.ampCookieSource = ProviderCookieSource(rawValue: raw) ?? .off
             })
         let cookieOptions = ProviderCookieSourceUI.options(
             allowsOff: false,

@@ -13,7 +13,7 @@ extension SettingsStore {
     }
 
     var factoryCookieSource: ProviderCookieSource {
-        get { self.resolvedCookieSource(provider: .factory, fallback: .auto) }
+        get { self.resolvedCookieSource(provider: .factory, fallback: .off) }
         set {
             self.updateProviderConfig(provider: .factory) { entry in
                 entry.cookieSource = newValue

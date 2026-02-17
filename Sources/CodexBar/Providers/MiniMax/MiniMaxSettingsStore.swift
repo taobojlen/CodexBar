@@ -35,7 +35,7 @@ extension SettingsStore {
     }
 
     var minimaxCookieSource: ProviderCookieSource {
-        get { self.resolvedCookieSource(provider: .minimax, fallback: .auto) }
+        get { self.resolvedCookieSource(provider: .minimax, fallback: .off) }
         set {
             self.updateProviderConfig(provider: .minimax) { entry in
                 entry.cookieSource = newValue

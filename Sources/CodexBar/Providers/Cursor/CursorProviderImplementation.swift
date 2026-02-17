@@ -43,7 +43,7 @@ struct CursorProviderImplementation: ProviderImplementation {
         let cookieBinding = Binding(
             get: { context.settings.cursorCookieSource.rawValue },
             set: { raw in
-                context.settings.cursorCookieSource = ProviderCookieSource(rawValue: raw) ?? .auto
+                context.settings.cursorCookieSource = ProviderCookieSource(rawValue: raw) ?? .off
             })
         let cookieOptions = ProviderCookieSourceUI.options(
             allowsOff: false,
